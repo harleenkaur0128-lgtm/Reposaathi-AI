@@ -1,0 +1,19 @@
+{
+  "name": "reposaathi-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RepoSaathi AI - an AI guide that helps beginners understand GitHub repositories and make their first contribution.",
+  "license": "MIT",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
